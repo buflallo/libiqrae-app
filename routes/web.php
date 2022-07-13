@@ -75,8 +75,8 @@ Route::get('/admin/commandes',[admincontroller::class, 'gestCommandes'])->name('
 
 Route::get('/admin/UpdateCommande/{id}',[admincontroller::class, 'gestfils'])->name('gestfils')->middleware('auth');
 
-Route::post('/admin/updatefils',[admincontroller::class, 'updatefils'])->middleware('auth');
-Route::post('/admin/updatePere',[admincontroller::class, 'updatePere'])->middleware('auth');
+Route::post('/admin/UpdateCommande/updatefils',[admincontroller::class, 'updatefils'])->middleware('auth');
+Route::post('/admin/UpdateCommande/updatePere',[admincontroller::class, 'updatePere'])->middleware('auth');
 Route::get('/admin/print/{id}',[admincontroller::class, 'printcommande'])->middleware('auth');
 
 Route::get('/admin/UpdateCommande/{id}/{status}',[admincontroller::class, 'upCommandes'])->middleware('auth');
