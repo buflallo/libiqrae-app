@@ -1,0 +1,23 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: Laravel
+data:
+  APP_DEBUG: "false"
+  APP_ENV: production
+  APP_KEY: base64:0R4zf9GwcXdwNPZ5b6870hfr9pso8bytoT7gsl+CK50=
+  APP_LOG_LEVEL: debug
+  APP_NAME: "Laravel"
+  APP_URL: https://www.laravel.com
+  BROADCAST_DRIVER: pusher
+  CACHE_DRIVER: redis
+  QUEUE_DRIVER: redis
+  SESSION_DRIVER: redis
+  DB_CONNECTION: mysql
+  DB_DATABASE: iqrae_bd
+  DB_HOST: host
+  DB_PASSWORD: Ayoub1994%%
+  DB_PORT: "3306"
+  DB_USERNAME: iqrae_base
+  REDIS_HOST: redis
+  REDIS_PORT: "6379"
