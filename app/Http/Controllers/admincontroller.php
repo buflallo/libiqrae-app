@@ -76,7 +76,7 @@ class admincontroller extends Controller
     }
     public function commandes()
     {
-        $commandes=commande::paginate(6);
+        $commandes=commande::all();
         return collect($commandes);
     }
     public function messages()

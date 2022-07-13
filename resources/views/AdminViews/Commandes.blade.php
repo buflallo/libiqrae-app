@@ -40,9 +40,9 @@
 							<div class="ms-auto">
 								<nav aria-label="breadcrumb">
 									<ol class="breadcrumb mb-0 p-0">
-										<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i> Home</a>
+										<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i> Accueill</a>
 										</li>
-										<li class="breadcrumb-item"><a href="javascript:;">Account</a>
+										<li class="breadcrumb-item"><a href="javascript:;">Admin</a>
 										</li>
 										<li class="breadcrumb-item active" aria-current="page">Mes Commandes</li>
 									</ol>
@@ -56,7 +56,7 @@
 
                 <section class="py-4">
 					<div class="container">
-						<h3 class="d-none">Account</h3>
+						<h3 class="d-none">Admin</h3>
 						<div class="card">
 							<div class="card-body">
 								<div class="row">
@@ -87,11 +87,11 @@
 																</td>
 																<td>
 																	<div class="d-flex gap-2"> 
-																	    <a href="UpdateCommande/{{ $commande->pere_id }}" class="btn btn-light btn-sm rounded-0">Mis a jour</a>
-																		<a href="print/{{ $commande->pere_id }}" class="btn btn-light btn-sm rounded-0">Print</a>
-																		<a href="UpdateCommande/{{ $commande->pere_id }}/Livré" class="btn btn-light btn-sm rounded-0">Livré</a>
-                                                                        <a href="UpdateCommande/{{ $commande->pere_id }}/En attente" class="btn btn-light btn-sm rounded-0">En attente</a>
-																		<a href="UpdateCommande/{{ $commande->pere_id }}/Annuler" class="btn btn-light btn-sm rounded-0">Annuler</a>
+																	    <a href="{{ asset('')}}admin/UpdateCommande/{{ $commande->pere_id }}" class="btn btn-light btn-sm rounded-0">Mis a jour</a>
+																		<a href="{{ asset('')}}admin/print/{{ $commande->pere_id }}" class="btn btn-light btn-sm rounded-0">Print</a>
+																		<a href="{{ asset('')}}admin/UpdateCommande/{{ $commande->pere_id }}/Livré" class="btn btn-light btn-sm rounded-0">Livré</a>
+                                                                        <a href="{{ asset('')}}admin/UpdateCommande/{{ $commande->pere_id }}/En attente" class="btn btn-light btn-sm rounded-0">En attente</a>
+																		<a href="{{ asset('')}}admin/UpdateCommande/{{ $commande->pere_id }}/Annuler" class="btn btn-light btn-sm rounded-0">Annuler</a>
 																		
 																	</div>
 																</td>

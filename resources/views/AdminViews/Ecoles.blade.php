@@ -38,13 +38,13 @@
 						<div class="page-breadcrumb d-flex align-items-center">
 							<h3 class="breadcrumb-title pe-3">My Orders</h3>
 							<div class="ms-auto">
-								<nav aria-label="breadcrumb">
+							<nav aria-label="breadcrumb">
 									<ol class="breadcrumb mb-0 p-0">
-										<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i> Home</a>
+										<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i> Accueill</a>
 										</li>
-										<li class="breadcrumb-item"><a href="javascript:;">Account</a>
+										<li class="breadcrumb-item"><a href="javascript:;">Admin</a>
 										</li>
-										<li class="breadcrumb-item active" aria-current="page">Ecoles</li>
+										<li class="breadcrumb-item active" aria-current="page">Mes Ecoles</li>
 									</ol>
 								</nav>
 							</div>
@@ -63,10 +63,10 @@
 										<div class="card shadow-none mb-3 mb-lg-0">
 											<div class="card-body">
 												<div class="list-group list-group-flush">	
-													<a href="commandes" class="list-group-item d-flex justify-content-between align-items-center bg-transparent">Commandes<i class='bx bx-cart-alt fs-5'></i></a>
-													<a href="ecoles" class="list-group-item active d-flex justify-content-between align-items-center">Ajouter ecole <i class='bx bx-download fs-5'></i></a>
-													<a href="ajouterListe" class="list-group-item d-flex justify-content-between align-items-center bg-transparent">Ajouter liste <i class='bx bx-home-smile fs-5'></i></a>
-													<a href="logout" class="list-group-item d-flex justify-content-between align-items-center bg-transparent">Logout <i class='bx bx-log-out fs-5'></i></a>
+													<a href="{{ asset('')}}admin/commandes" class="list-group-item d-flex justify-content-between align-items-center bg-transparent">Commandes<i class='bx bx-cart-alt fs-5'></i></a>
+													<a href="{{ asset('')}}admin/ecoles" class="list-group-item active d-flex justify-content-between align-items-center">Ajouter ecole <i class='bx bx-download fs-5'></i></a>
+													<a href="{{ asset('')}}admin/ajouterListe" class="list-group-item d-flex justify-content-between align-items-center bg-transparent">Ajouter liste <i class='bx bx-home-smile fs-5'></i></a>
+													<a href="{{ asset('')}}admin/logout" class="list-group-item d-flex justify-content-between align-items-center bg-transparent">Logout <i class='bx bx-log-out fs-5'></i></a>
 												</div>
 											</div>
 									    </div>

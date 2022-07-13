@@ -40,13 +40,13 @@
 						<div class="page-breadcrumb d-flex align-items-center">
 							<h3 class="breadcrumb-title pe-3">My Orders</h3>
 							<div class="ms-auto">
-								<nav aria-label="breadcrumb">
+                                <nav aria-label="breadcrumb">
 									<ol class="breadcrumb mb-0 p-0">
-										<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i> Home</a>
+										<li class="breadcrumb-item"><a href="javascript:;"><i class="bx bx-home-alt"></i> Accueill</a>
 										</li>
-										<li class="breadcrumb-item"><a href="javascript:;">Account</a>
+										<li class="breadcrumb-item"><a href="javascript:;">Admin</a>
 										</li>
-										<li class="breadcrumb-item active" aria-current="page">Lists</li>
+										<li class="breadcrumb-item active" aria-current="page">Mes listes</li>
 									</ol>
 								</nav>
 							</div>
