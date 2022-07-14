@@ -189,6 +189,28 @@ class admincontroller extends Controller
         return view('AdminViews.Commandes')->with('commandes',$commandes);
 
     }
+    public function gestCommandes_stat($status)
+    {
+        if(strcmp($status,"all") != 0)
+        {
+            $commandes = DB::table('commandes')->where('status','like',$status)
+            ->join('peres','peres.id','=','commandes.pere_id')
+            ->join('listes','listes.id','=','commandes.liste_id')
+            ->select('peres.id as pere_id','peres.nom as nom','peres.tel as tel','commandes.status','commandes.created_at','peres.adresse as address','peres.info as rem')->groupBy('peres.id','peres.nom','peres.tel','commandes.status','commandes.created_at','peres.adresse','peres.info')
+            ->get();
+        }
+        else
+        {
+            $commandes = DB::table('commandes')
+            ->join('peres','peres.id','=','commandes.pere_id')
+            ->join('listes','listes.id','=','commandes.liste_id')
+            ->select('peres.id as pere_id','peres.nom as nom','peres.tel as tel','commandes.status','commandes.created_at','peres.adresse as address','peres.info as rem')->groupBy('peres.id','peres.nom','peres.tel','commandes.status','commandes.created_at','peres.adresse','peres.info')
+            ->get();
+        }
+        return view('AdminViews.filter')->with('commandes',$commandes);
+
+    }
+    
     
     public function upCommandes($id,$status)
     {

@@ -71,12 +71,19 @@
 																<th>Télephone</th>
                                                             	<th>Adresse</th>
                                                             	<th>Remarque</th>
-																<th>Status</th>
+																<th>
+																	<select name="status" id="status">
+																		<option value="all" selected>status</option>
+																		<option value="livré">livré</option>
+																		<option value="en cours">en cours</option>
+																		<option value="Annuler">annuler</option>
+																	</select>
+																</th>
 																<th>Actions</th>
 																<th>date</th>
 															</tr>
 														</thead>
-														<tbody>
+														<tbody id="nonfiltred">
 														@foreach ($commandes as $commande)
 															<tr>
 																<td>{{ $commande->nom }}</td>
@@ -99,6 +106,8 @@
 																<td>{{ $commande->created_at }}</td>
 															</tr>
 														@endforeach	
+														</tbody>
+														<tbody id="filtred">
 														</tbody>
 													</table>
 												</div>
@@ -137,6 +146,21 @@
     <script src="{{ asset('assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js') }}"></script>
     <!--app JS-->
     <script src="{{ asset('assets/js/app.js') }}"></script>
+	<script>
+		$('#filtred').hide();
+		$('#status').on('change', function() {
+			$('#nonfiltred').hide();
+			$('#filtred').show();
+			var status = $(this).val();
+			$.ajax({
+				type: 'GET',
+				url: '{{ asset('')}}admin/commandes/'+status,
+				success: function(data) {
+					$('#filtred').html(data);
+				}
+			});
+		});
+	</script>
 </body>
 
 </html>

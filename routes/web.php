@@ -72,6 +72,7 @@ Route::post('/admin/ajouterListe',[admincontroller::class, 'storelist'])->middle
 
 
 Route::get('/admin/commandes',[admincontroller::class, 'gestCommandes'])->name('commandes')->middleware('auth');
+Route::get('/admin/commandes/{status}',[admincontroller::class, 'gestCommandes_stat'])->middleware('auth');
 
 Route::get('/admin/UpdateCommande/{id}',[admincontroller::class, 'gestfils'])->name('gestfils')->middleware('auth');
 
