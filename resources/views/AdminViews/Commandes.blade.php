@@ -73,6 +73,7 @@
                                                             	<th>Remarque</th>
 																<th>Status</th>
 																<th>Actions</th>
+																<th>date</th>
 															</tr>
 														</thead>
 														<tbody>
@@ -95,6 +96,7 @@
 																		
 																	</div>
 																</td>
+																<td>{{ $commande->created_at }}</td>
 															</tr>
 														@endforeach	
 														</tbody>

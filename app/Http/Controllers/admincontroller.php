@@ -184,7 +184,7 @@ class admincontroller extends Controller
         $commandes = DB::table('commandes')
         ->join('peres','peres.id','=','commandes.pere_id')
         ->join('listes','listes.id','=','commandes.liste_id')
-        ->select('peres.id as pere_id','peres.nom as nom','peres.tel as tel','commandes.status','peres.adresse as address','peres.info as rem')->groupBy('peres.id','peres.nom','peres.tel','commandes.status','peres.adresse','peres.info')
+        ->select('peres.id as pere_id','peres.nom as nom','peres.tel as tel','commandes.status','commandes.created_at','peres.adresse as address','peres.info as rem')->groupBy('peres.id','peres.nom','peres.tel','commandes.status','commandes.created_at','peres.adresse','peres.info')
         ->get();
         return view('AdminViews.Commandes')->with('commandes',$commandes);
 
