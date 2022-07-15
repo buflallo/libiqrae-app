@@ -90,7 +90,7 @@ h1, h2, h3, h4, h5 {
 }
 .btn-light{
 	color: #e7eaf3;
-	background: #0f6cb6!important;
+	background: #72c267!important;
 }
 
 .btn-white{
@@ -138,7 +138,7 @@ footer{
   .finder__icon::after {
 	width: 10px;
 	height: 10px;
-	background-color: #292929;
+	background-color: #72c267;
 	border: 3px solid #f6f5f0;
 	  border-top-width: 3px;
 	  border-right-width: 3px;
@@ -159,7 +159,7 @@ footer{
 	transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
   .active .finder__icon::before {
-	background-color: #292929;
+	background-color: #72c267;
 	width: 6px;
 	transform: rotateZ(45deg) translate(-50%, 25px);
   }
@@ -211,7 +211,7 @@ width: 40px;
 height: 40px;
 margin-right: 1rem;
 transition: all 0.2s;
-box-shadow: inset 0 0 0 20px #292929;
+box-shadow: inset 0 0 0 20px #72c267;
 border-radius: 50%;
 position: relative;
 }
@@ -251,18 +251,8 @@ transform: rotateZ(45deg);
 transform: rotateZ(405deg);
 }
 }
-  
 
-#test:hover #grya {
-display: none;
-}
-#test:hover #colorer {
-	display: block;
-}
 
-#colorer{
-	display: none;
-}
 
 .border-bottom {
 border-bottom: 1px solid #00a9cc !important;
@@ -316,7 +306,8 @@ body {
 	transition: background .3s;
 }
 input::placeholder {
-	opacity: .3!important
+	opacity: 0.7 !important;
+	color: #72c267;
 }
 a {
 	text-decoration: none
@@ -372,7 +363,7 @@ a {
 
 .primary-menu .navbar .nav-link {
 	font-family: museo-sans, sans-serif;
-	font-weight: 500;
+	font-weight: 700;
 	font-style: normal;
 	text-transform: uppercase;
 	font-size: 12px;
@@ -428,7 +419,9 @@ a {
 
 @media screen and (max-width: 991px) {
 	a.btn:nth-child(2) {
-		width: 46%;
+			width: 100px !important;
+			margin: 6px;
+			left: -8px !important;
 	   }	   
 	.primary-menu .navbar .nav-link {
 		font-size: 10px;
@@ -474,6 +467,9 @@ a {
 	}
 	h7{
 		font-size: 10px;
+	}
+	h6{
+		font-size: 14px;
 	}
 	.finder__outer {
 		max-width: 330px;
@@ -1894,7 +1890,10 @@ body.bg-theme15 {
 		padding: 2rem 1rem
 	}
 	.btn-ecomm{
-		font-size: 9px;
+		font-size: 11px;
+	}
+	h5{
+		text-align: center;
 	}
 }
 
@@ -2081,4 +2080,25 @@ body.bg-theme15 {
 .modal-content{
     background-color: #fff !important;
     
+}
+
+
+@media screen and (max-width: 391px) {
+	.d1-none{
+		display: 
+		none!important;
+	}
+	.btn-ecomm {
+		font-size: 9px;
+	}
+	.primary-menu .navbar .nav-link {
+		font-size: 9px;
+	}
+	.btn-cta {
+		font-size: 9px!important;
+	}
+	.checkbox-tools:checked + label, .checkbox-tools:not(:checked) + label {
+		width: 60px!important;
+		height: 48px!important;
+	}
 }

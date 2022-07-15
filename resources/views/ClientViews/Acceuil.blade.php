@@ -128,7 +128,7 @@
                         <hr>
 						<div class="brand-grid">
 						    <a href="https://api.whatsapp.com/send?phone=212659808723">
-							<img src="assets/images/gallery/WHATT.png" width="100%"></a>
+							<img src="assets/images/gallery/whats.png" width="100%"></a>
 							</div>
 					</div>
                 </section>
@@ -142,21 +142,18 @@
 						<div class="brand-grid">
 							<div class="brands-shops owl-carousel owl-theme border">
 								<div class="item border-end">
-									<div id="test" class="p-4">
+									<div id="test" class="p-2">
 											<img id="colorer" src="assets/images/brands/loggg-04.png" class="img-fluid" alt="...">
-											<img id="grya" src="assets/images/brands/loggg-05.png" class="img-fluid" alt="...">
 										</div>
 								</div>
 								<div class="item border-end">
-									<div id="test" class="p-4">
+									<div id="test" class="p-2">
 											<img id="colorer" src="assets/images/brands/loggg-06.png" class="img-fluid" alt="...">
-											<img id="grya" src="assets/images/brands/loggg-07.png" class="img-fluid" alt="...">
 									</div>
 								</div>
 								<div class="item border-end">
-									<div id="test" class="p-4">
+									<div id="test" class="p-2">
 										<img id="colorer" src="assets/images/brands/loggg-08.png" class="img-fluid" alt="...">
-										<img id="grya" src="assets/images/brands/loggg-09.png" class="img-fluid" alt="...">
 									</div>
 								</div>
 							</div>

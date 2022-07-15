@@ -13,11 +13,11 @@
 						</div>
 						<div class="col-12 col-md order-4 order-md-2">
 						</div>
-						<div class="col-5 col-md-auto order-3 d-none d-xl-flex align-items-center touch">
+						<div class="col-5 col-md-auto order-3 d-xl-flex align-items-center touch">
 							<div class="fs-1 text-white"> <img style="border-radius: 50% ; width: 32px" src="{{ asset('assets/images/avatar-ico2.png') }}" alt="Avatar">
 							</div>
 							<div class="ms-2">
-								<p class="mb-0 font-13">{{ __('help') }}</p>
+								<p class="d1-none mb-0 font-13">{{ __('help') }}</p>
 								<h5 class="mb-0" style="font-size: 12px;">06-59-80-87-23</h5>
 							</div>
 						</div>
