@@ -91,7 +91,7 @@
             						<form method="POST" action="contact">
             						    @csrf
             							<div class="form-body">
-            								<h6 class="mb-0 text-uppercase">Drop us a line</h6>
+            								<h3 class="mb-0 text-uppercase">Drop us a line</h3>
             								<div class="my-3 border-bottom"></div>
             								<div class="mb-3">
             									<label class="form-label">Nom complet</label>

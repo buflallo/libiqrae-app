@@ -52,6 +52,7 @@ h3{
 	color: #000 ;
 }
 h5{
+	text-align: center;
 	color: #000 ;
 }
 h4{
@@ -84,7 +85,10 @@ h1, h2, h3, h4, h5 {
 	font-weight: 400;
   }
 
-.card-body h6 {
+  h1, h2, h3, h4, h5 , h6{
+	text-transform: capitalize;
+  }
+.card-body h5 {
     color: #000 ;
 	height: 50px;
 }
@@ -592,7 +596,7 @@ body.offcanvas-active {
 		margin-bottom: 0;
 	}
 	.product-grid .card.product-card:hover {
-		background-color: rgb(0 0 0 / 20%);
+		background-color: rgb(0 169 204 / 30%);
 		-webkit-box-shadow: 0 0.3rem 0.8rem rgb(0 0 0 / 12%);
 		box-shadow: 0 0.3rem 0.8rem rgb(0 0 0 / 12%);
 	}
@@ -658,6 +662,9 @@ body.offcanvas-active {
 	background: rgb(255 255 255 / 8%);
 	text-align: center;
 	text-transform: uppercase;
+}
+.news-title {
+	height: 50px;
 }
 .date-number {
 	display: block;
@@ -845,14 +852,32 @@ ul.categories-list li {
 	color: #000;
 }
 .step-item .bx{
-	color: #000;
+	color: #72c267;
 }
 
 .step-item div{
-	color: #000;
+	color: #0f6cb6;
 }
 
 
+.rounded-0 .card-body {
+	background-color: #fff;
+}
+
+.form-body h2 {
+	color: #0f6cb6;
+}
+.form-select {
+	color: #00a9cc;
+}
+
+.form-body h3 {
+	color: #0f6cb6;
+}
+
+.form-body div {
+	color: #0f6cb6;
+}
 
 .back-to-top {
 	display: none;
@@ -879,9 +904,11 @@ ul.categories-list li {
 .breadcrumb-title {
 	font-size: 24px;
 	border-right: 1.5px solid rgb(255 255 255 / 34%);
+	color: #0f6cb6;
+	font-weight: 700;
 }
 .page-breadcrumb .breadcrumb li.breadcrumb-item {
-	font-size: 16px
+	font-size: 16px !important;
 }
 .page-breadcrumb .breadcrumb-item+.breadcrumb-item::before {
 	display: inline-block;
@@ -1662,8 +1689,8 @@ ul.categories-list li {
 	border-top-left-radius: 10px;
 	border-bottom-left-radius: 10px;
 	position: fixed;
-	bottom: 2%;
-	left: 2%;
+	bottom: 5%;
+	left: -16px;
 	cursor: pointer
 }
 .switcher-wrapper.switcher-toggled {

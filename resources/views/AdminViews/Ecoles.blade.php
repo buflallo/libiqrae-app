@@ -128,7 +128,7 @@
 																<td>{{ $ecole->nom }}</td>
 																<td><img style="width: 212px;height: auto;" src="../assets/images/ecole/{{ $ecole->logo_img }}"></td>
 																<td>
-																		<a href="deleteEcole/{{ $ecole->id }}" class="btn btn-light btn-sm rounded-0">Supprimer</a>
+																		<a href="deleteEcole/{{ $ecole->id }}" class="btn btn-light btn-sm">Supprimer</a>
 																	</div>
 																</td>
 															</tr>

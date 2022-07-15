@@ -83,12 +83,12 @@
 										<div id="zbi" class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4">
 											@foreach ($ecoles as $ecole)
 												<div class="col">
-													<div class="card rounded-0 product-card">
+													<div class="card product-card">
 														<img src="{{ asset('')}}test.png" class="card-img-top" alt="{{ $ecole->nom }}">
 														<div class="card-body">
 															<div class="product-info">
 																<a href="{{ asset('')}}liste-ecoles-prives-meknes/{{ $ecole->id }}">
-																	<h6 class="product-name mb-2">{{ $ecole->nom }}</h6>
+																	<h5 class="product-name mb-2">{{ $ecole->nom }}</h5>
 																</a>
 																<div class="product-action mt-2">
 																	<div class="d-grid gap-2">

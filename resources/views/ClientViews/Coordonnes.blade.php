@@ -62,7 +62,7 @@
 							<div class="row">
 								<div class="col-12 col-xl-8" style="margin : auto">
 									<div class="checkout-details">
-										<div class="card bg-transparent rounded-0 shadow-none">
+										<div class="card bg-transparent shadow-none">
 											<div class="card-body">
 												<div class="steps steps-light">
 													
@@ -92,7 +92,7 @@
 													<div class="my-3 border-bottom"></div>
 													<div class="form-body">
 														<div id="form-check" class="row g-3">
-															<h2 class="h5 mb-0">{{ __('confirm list title') }}</h2>
+															<h3 class="mb-0">{{ __('confirm list title') }}</h3>
 															<img src="{{ asset('')}}assets/images/liste/{{ $liste[0]->img }}" width="100%">
 															<div class="col-md-6">
 																<div class="d-grid">	<a href="{{ asset('')}}liste-ecoles-prives-meknes/{{ $liste[0]->ecole_id }}" class="btn btn-light btn-ecomm"><i class="bx bx-chevron-left"></i>{{ __('back to list') }}</a>
@@ -124,7 +124,7 @@
 														@endif
 														<form action="{{ asset('')}}commandeStore/{{ $liste[0]->id }}" method="POST" id="form-oblig" style="display: none;" class="row g-3">
 															@csrf
-															<h2 class="h5 mb-0">{{ __('client info title') }}</h2>
+															<h2 class="mb-0">{{ __('client info title') }}</h2>
 															<div class="col-md-6">
 																<label class="form-label">{{ __('client name') }}</label>
 																<input name="nom" type="text" class="form-control rounded-0" required>

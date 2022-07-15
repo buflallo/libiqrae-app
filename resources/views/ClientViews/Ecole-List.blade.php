@@ -85,12 +85,12 @@
 										<div class="row row-cols-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-4">
 											@foreach ($listes as $liste)
 											<div class="col">
-												<div class="card rounded-0 product-card">
+												<div class="card product-card">
 													<img src="{{ asset('')}}assets/images/liste/{{ $liste->img }}" class="card-img-top" alt="Liste de {{ $liste->classe }}">
 													<div class="card-body">
 														<div class="product-info">
 															<a href="{{ asset('')}}commander/{{ $liste->id }}/{{ $ecole[0]->id }}">
-																<h6 class="product-name mb-2">{{ __('level indicator') }} : {{ $liste->classe }}</h6>
+																<h5 class="product-name mb-2">{{ __('level indicator') }} : {{ $liste->classe }}</h5>
 															</a>
 															<div class="d-flex align-items-center">
 															</div>
