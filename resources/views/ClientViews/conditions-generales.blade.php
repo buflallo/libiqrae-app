@@ -11,11 +11,11 @@
 	<link rel="icon" href="{{ asset('assets/images/favicon-32x32.png') }}" type="image/png" />
     <!--plugins-->
     <link href="{{ asset('assets/plugins/OwlCarousel/css/owl.carousel.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/plugins/metismenu/css/metisMenu.min.css') }}" rel="stylesheet" />
+    
+    
+    
     <link href="{{ asset('assets/plugins/nouislider/nouislider.min.css') }}" rel="stylesheet" />
-	<link rel="stylesheet" href="https://use.typekit.net/efm0wqg.css">
+
     <!-- loader-->
 	<!--
 		<link href="{{ asset('assets/css/pace.min.css') }}" rel="stylesheet" />
@@ -46,11 +46,10 @@
 							<h3 class="breadcrumb-title pe-3">A propos de Iqrae</h3>
 							<div class="ms-auto">
 								<nav aria-label="breadcrumb">
-									<ol class="breadcrumb mb-0 p-0">
-										<li class="breadcrumb-item"><a href="{{ asset('')}}"><i
-													class="bx bx-home-alt"></i> Acceuil</a>
+									<ol class="breadcrumb mb-0 p-0" style="background-color: transparent;">
+										<li class="breadcrumb-item"><a href="{{ asset('')}}"><i class="bx bx-home-alt"></i> {{ __('nav1') }}</a>
 										</li>
-										<li class="breadcrumb-item active" aria-current="page">About Us</li>
+										<li class="breadcrumb-item">{{ __('nav3') }}</li>
 									</ol>
 								</nav>
 							</div>
@@ -268,43 +267,8 @@
         
     </div>
 	<!--end switcher-->
-	<!-- Bootstrap JS -->
-	<script src="{{ asset('assets/js/jquery.min.js') }}"></script>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    	<!--plugins-->
-<script src="{{ asset('assets/plugins/simplebar/js/simplebar.min.js') }}"></script>
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><script src="{{ asset('assets/plugins/OwlCarousel/js/owl.carousel.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/OwlCarousel/js/owl.carousel2.thumbs.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/metismenu/js/metisMenu.min.js') }}"></script>
-<script src="{{ asset('assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js') }}"></script>
-<!--app JS-->
-<script src="{{ asset('assets/js/app.js') }}"></script>
-	<script src="{{ asset('/js/index.js') }}"></script>
-<script src="{{ asset('assets/js/demo.js') }}"></script>	
-	<script>
-    $(document).on('click','.cookeies-block button', function(e) {
-    e.preventDefault();
-    $.ajax({
-        
-        method: 'POST',
-        url: 'cookie',
-        data : {
-            "_token": "{{ csrf_token() }}",
-            'name' : 'accept-cookie',
-            'value' : true
-        },
-        success: function (response) {
-            $('#footer').find('.cookeies-block').hide();
-        },
-        error: function (error) {
-            alert('Error: Please refresh the page');
-        },
-    });
-    });
-    </script>
-	<!--app JS-->
-    
+	
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </body>
 
 </html>

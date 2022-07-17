@@ -11,11 +11,11 @@
 	<link rel="icon" href="{{ asset('assets/images/favicon-32x32.png') }}" type="image/png" />
     <!--plugins-->
     <link href="{{ asset('assets/plugins/OwlCarousel/css/owl.carousel.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/plugins/metismenu/css/metisMenu.min.css') }}" rel="stylesheet" />
+    
+    
+    
     <link href="{{ asset('assets/plugins/nouislider/nouislider.min.css') }}" rel="stylesheet" />
-	<link rel="stylesheet" href="https://use.typekit.net/efm0wqg.css">
+
     <!-- loader-->
 	<!--
 		<link href="{{ asset('assets/css/pace.min.css') }}" rel="stylesheet" />
@@ -44,10 +44,10 @@
 							<h3 class="breadcrumb-title pe-3">{{ __('commande title') }}</h3>
 							<div class="ms-auto">
 								<nav aria-label="breadcrumb">
-									<ol class="breadcrumb mb-0 p-0">
-										<li class="breadcrumb-item"><a href="{{ asset('')}}"><i class="bx bx-home-alt"></i>{{ __('nav1') }}</a>
+									<ol class="breadcrumb mb-0 p-0" style="background-color: transparent;">
+										<li class="breadcrumb-item"><a href="{{ asset('')}}"><i class="bx bx-home-alt"></i> {{ __('nav1') }}</a>
 										</li>
-										<li class="breadcrumb-item active" aria-current="page">{{ __('Cart') }}</li>
+										<li class="breadcrumb-item">{{ __('Cart') }}</li>
 									</ol>
 								</nav>
 							</div>
@@ -134,8 +134,8 @@
 																<input id="tel" name="tel" type="text" class="form-control rounded-0" maxlength="13" required>
 															</div>
 															<div class="col-md-6">
-																<label class="form-label">{{ __('client mail') }}</label>
-																<input name="email" type="text" class="form-control rounded-0">
+																<label class="form-label">{{ __('client adresse') }}</label>
+																<input name="adresse" type="text" class="form-control rounded-0">
 															</div>
 															<div class="col-md-6">
 																<label class="form-label">{{ __('client product quality') }}</label>
@@ -229,25 +229,6 @@
 		step2.classList.add('active');
 		step2.classList.add('current');
 	}
-    $(document).on('click','.cookeies-block button', function(e) {
-    e.preventDefault();
-    $.ajax({
-        
-        method: 'POST',
-        url: 'cookie',
-        data : {
-            "_token": "{{ csrf_token() }}",
-            'name' : 'accept-cookie',
-            'value' : true
-        },
-        success: function (response) {
-            $('#footer').find('.cookeies-block').hide();
-        },
-        error: function (error) {
-            alert('Error: Please refresh the page');
-        },
-    });
-    });
 
 	$('#tel').keydown(function(e){
 		if(e.which != 8 && (e.which < 48 || e.which > 57) && (e.which > 41 || e.which < 37)) {

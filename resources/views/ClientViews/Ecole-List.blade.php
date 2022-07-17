@@ -11,11 +11,11 @@
 	<link rel="icon" href="{{ asset('assets/images/favicon-32x32.png') }}" type="image/png" />
     <!--plugins-->
     <link href="{{ asset('assets/plugins/OwlCarousel/css/owl.carousel.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/plugins/metismenu/css/metisMenu.min.css') }}" rel="stylesheet" />
+    
+    
+    
     <link href="{{ asset('assets/plugins/nouislider/nouislider.min.css') }}" rel="stylesheet" />
-	<link rel="stylesheet" href="https://use.typekit.net/efm0wqg.css">
+
     <!-- loader-->
 	<!--
 		<link href="{{ asset('assets/css/pace.min.css') }}" rel="stylesheet" />
@@ -115,9 +115,9 @@
 										<ul class="pagination butona">
 											{{-- Previous Page Link --}}
 											@if ($listes->onFirstPage())
-											<li class="page-item"><a class="page-link" aria-disabled="true" ><i class='bx bx-chevron-left'></i>{{ __('btn previous') }}</a>
+											<li class="page-item"><a class="page-link" aria-disabled="true" ><i class='bx bx-chevron-left'></i>{{ __('btn previous') }} </a>
 											@else
-											<li class="page-item"><a class="page-link" href="{{ $listes->previousPageUrl() }}" ><i class='bx bx-chevron-left'></i> {{ __('Prev') }}</a>
+											<li class="page-item"><a class="page-link" href="{{ $listes->previousPageUrl() }}" ><i class='bx bx-chevron-left'></i>{{ __('btn previous') }} </a>
 											</li>
 											@endif
 										</ul>
@@ -132,7 +132,7 @@
 											<li class="page-item"><a class="page-link" href="{{ $listes->nextPageUrl() }}" aria-label="Next">{{ __('btn next') }} <i class='bx bx-chevron-right'></i></a>
 											</li>
 										@else
-										<li class="page-item"><a class="page-link" aria-disabled="true" >{{ __('Next') }} <i class='bx bx-chevron-right'></i></a>
+										<li class="page-item"><a class="page-link" aria-disabled="true" >{{ __('btn next') }} <i class='bx bx-chevron-right'></i></a>
 											</li>
 										@endif
 									</ul>
@@ -176,7 +176,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    	<!--plugins-->
 <script src="{{ asset('assets/plugins/simplebar/js/simplebar.min.js') }}"></script>
-<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><script src="{{ asset('assets/plugins/OwlCarousel/js/owl.carousel.min.js') }}"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<script src="{{ asset('assets/plugins/OwlCarousel/js/owl.carousel.min.js') }}"></script>
 <script src="{{ asset('assets/plugins/OwlCarousel/js/owl.carousel2.thumbs.min.js') }}"></script>
 <script src="{{ asset('assets/plugins/metismenu/js/metisMenu.min.js') }}"></script>
 <script src="{{ asset('assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js') }}"></script>
@@ -184,27 +185,6 @@
 <script src="{{ asset('assets/js/app.js') }}"></script>
 	<script src="{{ asset('/js/index.js') }}"></script>
 <script src="{{ asset('assets/js/demo.js') }}"></script>	
-	<script>
-    $(document).on('click','.cookeies-block button', function(e) {
-    e.preventDefault();
-    $.ajax({
-        
-        method: 'POST',
-        url: 'cookie',
-        data : {
-            "_token": "{{ csrf_token() }}",
-            'name' : 'accept-cookie',
-            'value' : true
-        },
-        success: function (response) {
-            $('#footer').find('.cookeies-block').hide();
-        },
-        error: function (error) {
-            alert('Error: Please refresh the page');
-        },
-    });
-    });
-    </script>
 	<!--app JS-->
     <script>
     $(document).ready(function(){

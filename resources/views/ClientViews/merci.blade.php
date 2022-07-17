@@ -11,11 +11,11 @@
 	<link rel="icon" href="{{ asset('assets/images/favicon-32x32.png') }}" type="image/png" />
     <!--plugins-->
     <link href="{{ asset('assets/plugins/OwlCarousel/css/owl.carousel.min.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
-    <link href="{{ asset('assets/plugins/metismenu/css/metisMenu.min.css') }}" rel="stylesheet" />
+    
+    
+    
     <link href="{{ asset('assets/plugins/nouislider/nouislider.min.css') }}" rel="stylesheet" />
-	<link rel="stylesheet" href="https://use.typekit.net/efm0wqg.css">
+
     <!-- loader-->
 	<!--
 		<link href="{{ asset('assets/css/pace.min.css') }}" rel="stylesheet" />
@@ -94,29 +94,6 @@
 	<script src="assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js"></script>
 	<!--app JS-->
 	<script src="assets/js/app.js"></script>
-	<script>
-    $(document).on('click','.cookeies-block button', function(e) {
-    e.preventDefault();
-    $.ajax({
-        
-        method: 'POST',
-        url: 'cookie',
-        data : {
-            "_token": "{{ csrf_token() }}",
-            'name' : 'accept-cookie',
-            'value' : true
-        },
-        success: function (response) {
-            $('#footer').find('.cookeies-block').hide();
-        },
-        error: function (error) {
-            alert('Error: Please refresh the page');
-        },
-    });
-    });
-    </script>
-	<!--app JS-->
-    
 	
 </body>
 

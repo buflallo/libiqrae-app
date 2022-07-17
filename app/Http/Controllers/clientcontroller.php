@@ -105,6 +105,7 @@ class clientcontroller extends Controller
 
             'tel' => 'required',
 
+            'adresse' => 'required'
         ]);
 
         $input = $request->all();

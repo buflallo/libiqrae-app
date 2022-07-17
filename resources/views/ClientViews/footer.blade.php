@@ -6,15 +6,15 @@
                     <div class="footer-section1 mb-3">
                         <h7 class="mb-3 text-uppercase">{{ __('find us') }}</h7>
                         <div class="address mb-3">
-                            <p class="mb-0 text-uppercase text-white">{{ __('adress') }}</p>
+                            <p class="mb-0 font-13">{{ __('adress') }}</p>
                             <p class="mb-0 font-12">21 DB EL BAKRI RIAD MEKNÈS</p>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="footer-section1 mb-3">
+                        <h7 class="mb-3 text-uppercase">{{ __('phone') }}</h7>
                         <div class="phone mb-3">
-                            <p class="mb-0 text-uppercase text-white">{{ __('phone') }}</p>
                             <p class="mb-0 font-13">{{ __('Télephone fix') }} : +212 535-537843</p>
                             <p class="mb-0 font-13">{{ __('Télephone fix') }} : +212 535-517001</p>
                         </div>
@@ -22,16 +22,16 @@
                 </div>
                 <div class="col">
                     <div class="footer-section1 mb-3">
+                        <h7 class="mb-3 text-uppercase">{{ __('mail') }}</h7>
                         <div class="email mb-3">
-                            <p class="mb-0 text-uppercase text-white">{{ __('mail') }}</p>
                             <p class="mb-0 font-13">Ayoub.iqrae@gmail.com</p>
                         </div>
                     </div>
                 </div>
                 <div class="col">
                     <div class="footer-section1 mb-3">
+                        <h7 class="mb-3 text-uppercase">{{ __('Hours') }}</h7>
                         <div class="working-days mb-3">
-                            <p class="mb-0 text-uppercase text-white">{{ __('Hours') }}</p>
                             <p class="mb-0 font-13">{{ __('Hours info') }}</p>
                         </div>
                     </div>

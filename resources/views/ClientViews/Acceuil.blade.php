@@ -6,16 +6,12 @@
 	<meta charset="utf-8">
 	<meta name="csrf-token" value="{{ csrf_token() }}" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://use.typekit.net/efm0wqg.css">
+
 	<!--favicon-->
 	<link rel="icon" href="{{ asset('assets/images/favicon-32x32.png') }}" type="image/png" />
 	<!--plugins-->
-	<link href="{{ asset('assets/plugins/simplebar/css/simplebar.css') }}" rel="stylesheet" />
-	<link href="{{ asset('assets/plugins/perfect-scrollbar/css/perfect-scrollbar.css') }}" rel="stylesheet" />
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-	<link href="{{ asset('assets/plugins/metismenu/css/metisMenu.min.css') }}" rel="stylesheet" />
+	
 	<link href="{{ asset('assets/plugins/nouislider/nouislider.min.css') }}" rel="stylesheet" />
-	<link rel="stylesheet" href="https://use.typekit.net/efm0wqg.css">
 	<!-- Lunar CSS -->
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans:600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,700,800,900" rel="stylesheet">
@@ -52,16 +48,12 @@
 			<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
 				<ol class="carousel-indicators">
 					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-					<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
 					<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
 					<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
 				</ol>
 				<div class="carousel-inner">
 					<div class="carousel-item active">
 						<div class="d-block slide1"></div>
-					</div>
-					<div class="carousel-item">
-						<div class="d-block slide2"></div>
 					</div>
 					<div class="carousel-item">
 						<div class="d-block slide3"></div>
@@ -132,6 +124,54 @@
 							</div>
 					</div>
                 </section>
+				<section class="py-4">
+					<div class="container">
+						<div class="d-flex align-items-center" style="background-color: #0f6cb6;">
+							<h6 class="text-uppercase mb-0 barred">{{ __('schools slider') }}</h6>
+							<a href="{{ asset('')}}liste-ecoles-prives-meknes" style="background : #72c267!important" class="btn btn-light ms-auto rounded-0">{{ __('nav2') }}<i
+									class='bx bx-chevron-right'></i></a>
+						</div>
+						<hr />
+						<div class="product-grid">
+							<div class="card product-card border nohover">
+								<a href="#">
+									<img src="{{ asset('')}}image/cat-slide.jpg"
+										class="card-img-top " style="height: 200px; width:100%; margin-top : 0" alt="cat1">
+								</a>
+							</div>
+							<div class="card product-card border nohover" style="display: block">
+								<a href="#">
+									<img src="test.png"
+										class="f-none card-img-top " style="height: 200px; padding-right:5px; width:50%" alt="{{ $ecole->nom }}">
+								</a>
+								<a href="#">
+									<img src="test.png"
+										class="f-none card-img-top " style="height: 200px; padding-left:5px; width:49%" alt="{{ $ecole->nom }}">
+								</a>
+							</div>
+							<div class="card product-card border nohover" style="display: block">
+								<a href="#">
+									<img src="test.png"
+										class="f-none card-img-top " style="height: 200px; padding-right:5px; width:50%" alt="{{ $ecole->nom }}">
+								</a>
+								<a href="#">
+									<img src="test.png"
+										class="f-none card-img-top " style="height: 200px; padding-left:5px; width:49%" alt="{{ $ecole->nom }}">
+								</a>
+							</div>
+							<div class="card product-card border nohover" style="display: block">
+								<a href="#">
+									<img src="test.png"
+										class="f-none card-img-top " style="height: 200px; padding-right:5px; width:50%" alt="{{ $ecole->nom }}">
+								</a>
+								<a href="#">
+									<img src="test.png"
+										class="f-none card-img-top " style="height: 200px; padding-left:5px; width:49%" alt="{{ $ecole->nom }}">
+								</a>
+							</div>
+						</div>
+					</div>
+				</section>
 				<!--start brands-->
 				<section class="py-4">
 					<div class="container">
@@ -288,9 +328,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>    	<!--plugins-->
 	<script src="{{ asset('assets/plugins/simplebar/js/simplebar.min.js') }}"></script>
+	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 	<script src="{{ asset('assets/plugins/OwlCarousel/js/owl.carousel.min.js') }}"></script>
 	<script src="{{ asset('assets/plugins/OwlCarousel/js/owl.carousel2.thumbs.min.js') }}"></script>
-	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 	<script src="{{ asset('assets/plugins/metismenu/js/metisMenu.min.js') }}"></script>
 	<script src="{{ asset('assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js') }}"></script>
 	<!--app JS-->
@@ -309,25 +349,6 @@
 					window.location.href = "https://api.whatsapp.com/send?phone=212659808723&text=hello%20i%20want%20help%20to%20get%20my%20lists";
 				},2000);
 		};
-
-		$(document).on('click','.cookeies-block button', function(e) {
-			e.preventDefault();
-			$.ajax({
-				method: 'POST',
-				url: 'cookie',
-				data : {
-					"_token": "{{ csrf_token() }}",
-					'name' : 'accept-cookie',
-					'value' : true
-				},
-				success: function (response) {
-					$('#footer').find('.cookeies-block').hide();
-				},
-				error: function (error) {
-					alert('Error: Please refresh the page');
-				},
-			});
-		});
     </script>
 	<!--app JS-->
     
