@@ -147,7 +147,7 @@ class admincontroller extends Controller
 
         if ($image = $request->file('logo_img')) {
 
-                $destinationPath = 'assets/images/ecole/';
+                $destinationPath = '/assets/images/ecole/';
     
                 $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
     
