@@ -131,7 +131,7 @@ p{
 .checkbox-tools:checked + label,
 .checkbox-tools:not(:checked) + label{
     width: 70px;
-    height: 55px;
+    height: 53px;
     background-size: contain;
 }
 

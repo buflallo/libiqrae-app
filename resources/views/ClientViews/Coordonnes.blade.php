@@ -149,7 +149,7 @@
 																</div>
 															</div>
 															<div class="col-md-6">
-																<div class="d-grid"><button type="submit" class="btn btn-white btn-ecomm">{{ __('confirm client info') }}<i class="bx bx-chevron-right"></i></button>
+																<div class="d-grid"><a href="#" class="btn btn-white btn-ecomm"  onclick="phonenumber(document.getElementById('tel'));">{{ __('confirm client info') }}<i class="bx bx-chevron-right"></i></a>
 																</div>
 															</div>
 														</form>
@@ -230,13 +230,20 @@
 		step2.classList.add('current');
 	}
 
-	$('#tel').keydown(function(e){
-		if(e.which != 8 && (e.which < 48 || e.which > 57) && (e.which > 41 || e.which < 37)) {
-			e.preventDefault();
-			return;
+	
+	function phonenumber(inputtxt)
+	{
+	  var phoneno = /^\d{9,13}$/;
+	  if(inputtxt.value.match(phoneno))
+		{
+	      		form.submit(); 
 		}
-	});
-    </script>
+	      else
+		{
+			return false;
+		}
+	}
+</script>
 	<!--app JS-->
     
     

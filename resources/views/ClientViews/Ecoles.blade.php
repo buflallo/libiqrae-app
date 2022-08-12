@@ -84,7 +84,7 @@
 											@foreach ($ecoles as $ecole)
 												<div class="col">
 													<div class="card product-card">
-														<img src="{{ asset('')}}test.png" class="card-img-top" alt="{{ $ecole->nom }}">
+														<img src="{{ asset('')}}assets/images/ecole/{{ $ecole->logo_img }}" class="card-img-top" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" alt="{{ $ecole->nom }}">
 														<div class="card-body">
 															<div class="product-info">
 																<a href="{{ asset('')}}liste-ecoles-prives-meknes/{{ $ecole->id }}">

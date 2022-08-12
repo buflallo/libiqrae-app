@@ -45,7 +45,7 @@
                     <span style="padding-right: 6px; border-right: 0.5px solid;">
                        <a href="Conditions-générales-de-vente">{{ __('Cgv') }}</a>
                     </span>
-                    <span style="padding-right: 6px; padding-left:6px ;border-right: 0.5px solid;">
+                    <span style="padding-right: 6px; padding-left:6px ; border-right: 0.5px solid;">
                         <a href="Comment-passer-une-commande">{{ __('How to buy') }}</a>
                     </span>
                     <span style="padding-right: 6px; padding-left:6px">

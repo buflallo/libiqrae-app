@@ -10,9 +10,7 @@
 	<!--favicon-->
 	<link rel="icon" href="{{ asset('assets/images/favicon-32x32.png') }}" type="image/png" />
 	<!--plugins-->
-	
-	<link href="{{ asset('assets/plugins/nouislider/nouislider.min.css') }}" rel="stylesheet" />
-	<!-- Lunar CSS -->
+	<link rel="stylesheet" href="https://use.typekit.net/efm0wqg.css">
 	<link href="https://fonts.googleapis.com/css?family=Work+Sans:600" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Overpass:300,400,600,700,800,900" rel="stylesheet">
 	
@@ -30,18 +28,114 @@
 	<link href="{{ asset('assets/css/icons.css') }}" rel="stylesheet">
 	<link rel="stylesheet" href="{{ asset('assets/css/lunar.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/demo.css') }}">
+<style>
+		.lds-grid {
+			display: inline-block;
+			position: absolute;
+			width: 80px;
+			height: 80px;
+			left: 45%;
+			top: 45vh;
+		}
+		@media screen and (max-width: 768px) {
+			.lds-grid {
+				left: 40.5%;
+			}
+			.show-m {
+				display: block!important;	
+			}
+		}
+		.lds-grid div {
+		position: absolute;
+		width: 16px;
+		height: 16px;
+		border-radius: 50%;
+		background: #fff;
+		animation: lds-grid 1.2s linear infinite;
+		}
+		.lds-grid div:nth-child(1) {
+		top: 8px;
+		left: 8px;
+		animation-delay: 0s;
+		}
+		.lds-grid div:nth-child(2) {
+		top: 8px;
+		left: 32px;
+		animation-delay: -0.4s;
+		}
+		.lds-grid div:nth-child(3) {
+		top: 8px;
+		left: 56px;
+		animation-delay: -0.8s;
+		}
+		.lds-grid div:nth-child(4) {
+		top: 32px;
+		left: 8px;
+		animation-delay: -0.4s;
+		}
+		.lds-grid div:nth-child(5) {
+		top: 32px;
+		left: 32px;
+		animation-delay: -0.8s;
+		}
+		.lds-grid div:nth-child(6) {
+		top: 32px;
+		left: 56px;
+		animation-delay: -1.2s;
+		}
+		.lds-grid div:nth-child(7) {
+		top: 56px;
+		left: 8px;
+		animation-delay: -0.8s;
+		}
+		.lds-grid div:nth-child(8) {
+		top: 56px;
+		left: 32px;
+		animation-delay: -1.2s;
+		}
+		.lds-grid div:nth-child(9) {
+		top: 56px;
+		left: 56px;
+		animation-delay: -1.6s;
+		}
+		@keyframes lds-grid {
+		0%, 100% {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0.5;
+		}
+		}
+	</style>
+	<script>
+	document.onreadystatechange = function()
+	{
+		console.log(document.readyState);
+		if (document.readyState === 'interactive')
+		{
+			console.log("onbefore")
+		}
+	};
+	window.onload = function(e)
+	{
+		console.log("onload");
+		window.document.getElementById("loader").style.display = "none";
+		window.document.getElementById('page').style.display = 'block';
+		window.document.getElementById('bod').style.background = 'transparent';
+	};
+	</script>
 	<title>{{ __('nav1') }} - Iqrae</title>
 </head>
 
-<body>
+<body id="bod" style="background-color: #0f6cb6!important">
 	<!--wrapper-->
-	
+	<div id="loader" class="lds-grid"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>	
 	<button  type="button"  class="btn btn-dark btn-cta btn-cta-pos" data-toggle="modal" data-target="#demoModal">
 		<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-info-circle-fill" viewBox="0 0 16 16">
 			<path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
 		</svg>
 	</button>
-	<div class="wrapper">
+	<div style="display:none;" id="page" class="wrapper">
 		<!-- page entete -->
 		@include('ClientViews.header')
 		<section class="slider-section">
@@ -89,8 +183,8 @@
 								<div class="owl-me item">
 									<div class="card product-card border">
 										<a href="{{ asset('')}}liste-ecoles-prives-meknes/{{ $ecole->id }}">
-											<img src="test.png"
-												class="card-img-top border-bottom " alt="{{ $ecole->nom }}">
+											<img src="{{ asset('')}}assets/images/ecole/{{ $ecole->logo_img }}"
+												class="card-img-top" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" alt="{{ $ecole->nom }}">
 										</a>
 										<div class="card-body">
 											<div class="news-title">
@@ -120,53 +214,52 @@
                         <hr>
 						<div class="brand-grid">
 						    <a href="https://api.whatsapp.com/send?phone=212659808723">
-							<img src="assets/images/gallery/whats.png" width="100%"></a>
+							<img class="f-none" src="assets/images/gallery/image-web-banner.jpg" width="100%"></a>
+							<img class="show-m" style="display: none" src="assets/images/gallery/image-web-banner.jpg" width="100%"></a>
 							</div>
 					</div>
                 </section>
 				<section class="py-4">
 					<div class="container">
 						<div class="d-flex align-items-center" style="background-color: #0f6cb6;">
-							<h6 class="text-uppercase mb-0 barred">{{ __('schools slider') }}</h6>
-							<a href="{{ asset('')}}liste-ecoles-prives-meknes" style="background : #72c267!important" class="btn btn-light ms-auto rounded-0">{{ __('nav2') }}<i
-									class='bx bx-chevron-right'></i></a>
-						</div>
+							<h6 class="text-uppercase mb-0 barred">{{ __('mafourniture link') }}</h6>
+							</div>
 						<hr />
 						<div class="product-grid">
 							<div class="card product-card border nohover">
-								<a href="#">
+								<a href="https://mafourniture.ma/brand/269-molotow">
 									<img src="{{ asset('')}}image/cat-slide.jpg"
-										class="card-img-top " style="height: 200px; width:100%; margin-top : 0" alt="cat1">
+										class="card-img-top " style="width:100%; margin-top : 0" alt="Molotow">
 								</a>
 							</div>
 							<div class="card product-card border nohover" style="display: block">
-								<a href="#">
-									<img src="test.png"
-										class="f-none card-img-top " style="height: 200px; padding-right:5px; width:50%" alt="{{ $ecole->nom }}">
+								<a href="https://mafourniture.ma/772-fournitures-scolaires">
+									<img src="{{ asset('')}}image/1.png"
+										class="card-img-top " style="padding-right:5px; width:50%" alt="Fournitures Scolaires">
 								</a>
-								<a href="#">
-									<img src="test.png"
-										class="f-none card-img-top " style="height: 200px; padding-left:5px; width:49%" alt="{{ $ecole->nom }}">
-								</a>
-							</div>
-							<div class="card product-card border nohover" style="display: block">
-								<a href="#">
-									<img src="test.png"
-										class="f-none card-img-top " style="height: 200px; padding-right:5px; width:50%" alt="{{ $ecole->nom }}">
-								</a>
-								<a href="#">
-									<img src="test.png"
-										class="f-none card-img-top " style="height: 200px; padding-left:5px; width:49%" alt="{{ $ecole->nom }}">
+								<a href="https://mafourniture.ma/749-fournitures-de-bureau">
+									<img src="{{ asset('')}}image/2.png"
+										class="card-img-top " style="padding-left:5px; width:49%" alt="Fourniture De Bureau">
 								</a>
 							</div>
 							<div class="card product-card border nohover" style="display: block">
-								<a href="#">
-									<img src="test.png"
-										class="f-none card-img-top " style="height: 200px; padding-right:5px; width:50%" alt="{{ $ecole->nom }}">
+								<a href="https://mafourniture.ma/731-materiels-informatiques">
+									<img src="{{ asset('')}}image/3.png"
+										class="card-img-top " style="padding-right:5px; width:50%" alt="MATERIELS INFORMATIQUES">
 								</a>
-								<a href="#">
-									<img src="test.png"
-										class="f-none card-img-top " style="height: 200px; padding-left:5px; width:49%" alt="{{ $ecole->nom }}">
+								<a href="https://mafourniture.ma/739-papeterie-et-fournitures-artistiques">
+									<img src="{{ asset('')}}image/4.png"
+										class="card-img-top " style="padding-left:5px; width:49%" alt="PAPETERIE ET FOURNITURES ARTISTIQUES">
+								</a>
+							</div>
+							<div class="card product-card border nohover" style="display: block">
+								<a href="https://mafourniture.ma/752-espace-enfant">
+									<img src="{{ asset('')}}image/5.png"
+										class="card-img-top " style="padding-right:5px; width:50%" alt="ESPACE ENFANT">
+								</a>
+								<a href="https://mafourniture.ma/764-livres">
+									<img src="{{ asset('')}}image/6.png"
+										class="card-img-top " style="padding-left:5px; width:49%" alt="LIVRES">
 								</a>
 							</div>
 						</div>
@@ -196,7 +289,17 @@
 										<img id="colorer" src="assets/images/brands/loggg-08.png" class="img-fluid" alt="...">
 									</div>
 								</div>
-							</div>
+								<div class="item border-end">
+									<div id="test" class="p-2">
+										<img id="colorer" src="assets/images/brands/loggg-01.png" style="padding: 14px;width: 80%;margin: auto;" class="img-fluid" alt="...">
+									</div>
+								</div>
+								<div class="item border-end">
+                                                                        <div id="test" class="p-2">
+                                                                                <img id="colorer" src="assets/images/brands/loggg-02.png" style="width: 60%;margin: auto;" class="img-fluid" alt="...">
+                                                                        </div>
+                                                                </div>		
+						</div>
 						</div>
 					</div>
 				</section>
@@ -295,11 +398,11 @@
                                     <div class="row justify-content-center">
                                         <div class="col-12 pb-3">
 											<input class="checkbox-tools" type="radio" value="ar" name="tools" id="ar" {{ \Session::get('language') == 'ar' ? 'checked' : '' }}>
-                                            <label for="ar" class="lang" style="background-image: url('./assets/images/AR.png');"></label>
+                                            <label for="ar" class="lang" style="background-image: url('./assets/flags/4x3/ma.svg');"></label>
 											<input class="checkbox-tools" type="radio" value="en" name="tools" id="uk" {{ \Session::get('language') == 'en' ? 'checked' : '' }}>
-                                            <label for="uk" class="lang" style="background-image: url('./assets/images/Anglais.png')"></label>
+                                            <label for="uk" class="lang" style="background-image: url('./assets/flags/4x3/us.svg')"></label>
 											<input class="checkbox-tools" type="radio" value="fr" name="tools" id="fr" {{ \Session::get('language') == 'fr' ? 'checked' : '' }}>
-											<label for="fr" class="lang" style="background-image: url('./assets/images/Fançais.png')"></label>
+											<label for="fr" class="lang" style="background-image: url('./assets/flags/4x3/fr.svg')"></label>
                                         </div>
                                     </div>
                                 </div>	
@@ -330,7 +433,6 @@
 	<script src="{{ asset('assets/plugins/simplebar/js/simplebar.min.js') }}"></script>
 	<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 	<script src="{{ asset('assets/plugins/OwlCarousel/js/owl.carousel.min.js') }}"></script>
-	<script src="{{ asset('assets/plugins/OwlCarousel/js/owl.carousel2.thumbs.min.js') }}"></script>
 	<script src="{{ asset('assets/plugins/metismenu/js/metisMenu.min.js') }}"></script>
 	<script src="{{ asset('assets/plugins/perfect-scrollbar/js/perfect-scrollbar.js') }}"></script>
 	<!--app JS-->

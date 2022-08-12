@@ -96,7 +96,7 @@ h1, h2, h3, h4, h5 {
 	min-height: 50px;
 }
 .btn-light{
-	color: #e7eaf3;
+	color: #fff;
 	background: #72c267!important;
 }
 
@@ -180,6 +180,12 @@ footer{
 	transform-origin: 0 0;
 	border-radius: 4px;
   }
+.cgv p{
+	color:#212529;
+}
+#colorer{
+	height: 72px;
+}
 
 .finder {
 border: 1px solid #fff;
@@ -394,7 +400,6 @@ a {
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
-		width: 130% !important;
 		height: 20vh!important;
 	}
 	.carousel-control-prev{
@@ -438,8 +443,40 @@ a {
 	.nohover.border{
 		display: contents!important;
 	}
+	.slide1{
+		background-image: url('../../slide1-mob.jpg');
+	}
+	.slide2{
+		background-image: url('../../Top.png');
+	}
+
+	.slide3{
+		background-image: url('../../slide2-mob.png');
+	}
+
+	.slide4{
+		background-image: url('../../slide3-mob.png');
+	}
+	#map label{
+		margin: 0!important;
+	}
+	#map .contact-map {
+		width:100% !important;
+	}
+	 #map .service {
+                width:100% !important;
+       		border-bottom: 1px solid black;
+	}
 }
 
+#map label{
+                margin:	10px 0px;
+		padding: 10px 10px;
+		color: #0f6cb6;
+}
+#map b{
+	color: #000;
+}
 
 .primary-menu .navbar ul li a.dropdown-item {
 	color: rgb(255 255 255 / 85%);
@@ -670,7 +707,7 @@ a {
 }
 .btn-ecomm {
 	padding: .675rem .85rem;
-	font-size: 12px;
+	font-size: 16px;
 	font-weight: 500;
 	border-radius: 0;
 	text-transform: uppercase;
@@ -735,6 +772,11 @@ a {
 		margin-top: 0px;
 	}
 }
+
+.col-md-6 .form-control,.form-select{
+        border : 1px solid #343a407d;
+}
+
 @media only screen and (max-width: 1199px) {
 	.row.row-group>div {
 		border-right: 0;

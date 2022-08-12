@@ -115,13 +115,10 @@ class clientcontroller extends Controller
         $commande = new commande();
         
         if ($check) {
-            $commande_commande = Commande::where('pere_id','=',$check->id)->where('status','!=','en cours')->first();
-            if($commande_commande)
-            return view('ClientViews.Contact')->with('errors','error');
+	    $commande_commande1 = Commande::where('pere_id','=',$check->id)->where('liste_id','=',$id)->exists();
+            if($commande_commande1)
+            	return view('ClientViews.Contact')->with('errors','error');
             else
-                if (commande::where('liste_id','=',$id)->where('pere_id','=',$check->id)->exists()) {
-                    return back();
-                }else
                 $commande->pere_id = $check->id;
         }
         else{

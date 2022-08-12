@@ -86,7 +86,7 @@
 											@foreach ($listes as $liste)
 											<div class="col">
 												<div class="card product-card">
-													<img src="{{ asset('')}}assets/images/liste/{{ $liste->img }}" class="card-img-top" alt="Liste de {{ $liste->classe }}">
+													<img src="{{ asset('')}}assets/images/liste/{{ $liste->img }}" class="card-img-top" style="box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;" alt="Liste de {{ $liste->classe }}">
 													<div class="card-body">
 														<div class="product-info">
 															<a href="{{ asset('')}}commander/{{ $liste->id }}/{{ $ecole[0]->id }}">

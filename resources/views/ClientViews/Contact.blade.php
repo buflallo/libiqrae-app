@@ -61,21 +61,32 @@
 				<!--start page content-->
 				<section class="py-4" id="map">
 					<div class="container">
-						<h3 class="d-none">Google Map</h3>
-						<div class="contact-map p-3  rounded-0 shadow-none">
+					    <div class="row">
+						<div class="service" style="width:50%">
+							<h4 style="color:#00a9cc"><u>Nos Services</u></h4>
+							<label><b>SERVICES COMMERCIAL (CLIENT FINALE ET SOCIÉTÉ)</b> : 06 60 40 64 59</label>
+                                                        <label><b>SERVICE COMMERCIAL (GROS)</b> : 06 60 40 78 08</label>
+                                                        <label><b>SERVICE COMMERCIAL (RESPONSABLE SERVICES COMMERCIAL)</b> : 06 60 40 52 60</label>
+                                                        <label><b>SERVICE ACHATS</b> : 06 60 40 60 94</label>
+                                                        <label><b>E-COMMERCE (mafourniture.ma)</b> : 06 60 40 62 00</label>
+                                                        <label><b>SERVICES MARCHÉ / DEVIS</b> : 07 66 72 22 05</label>
+                                                        <label><b>SERVICES FACTURATION ET RECOUVREMENT</b> : 06 49 40 17 89</label>
+						</div>
+						<div class="contact-map  py-4   rounded-0 shadow-none" style="width:50%">
 							<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3312.152361188879!2d-5.571586675751865!3d33.885729678972254!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda05ad0f8435ba5%3A0xe5f4a927b6037fb!2sIqraa%20Library!5e0!3m2!1sen!2sma!4v1657669986399!5m2!1sen!2sma" class="w-100" allowfullscreen="" loading="lazy" height="450"></iframe>
 						</div>
+					    </div>
 					</div>
 				</section>
 				@if($errors == 'error')
-				<section class="py-4">
+				<section>
 				    <style type="text/css" scoped>
                         #map { display: none!important; } 
                     </style>
             		<div class="container">
             			<div class="row">
             				<div class="col-lg-8" style="background: rgba(255, 0, 0, 0.64);">
-                              <p style="text-align: center;font-size: 16px;">Vous avez déja effectué une commande, pour passez une autre essayer d'utiliser un autre numéro de telephone  </p>
+                              <p style="text-align: center;font-size: 16px;">Vous avez déja effectué un contact, pour passez une autre essayer d'utiliser un autre numéro de telephone  </p>
                     				</div>
                     			</div>
                     			<!--end row-->
@@ -92,7 +103,7 @@
             						<form method="POST" action="contact">
             						    @csrf
             							<div class="form-body">
-            								<h3 class="mb-0 text-uppercase">Drop us a line</h3>
+            								<h3 class="mb-0 text-uppercase">Envoyer Message</h3>
             								<div class="my-3 border-bottom"></div>
             								<div class="mb-3">
             									<label class="form-label">Nom complet</label>

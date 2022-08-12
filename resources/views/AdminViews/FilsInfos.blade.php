@@ -153,7 +153,7 @@
     <!--end wrapper-->
     <!--start switcher-->
     
-    <!--end switcher-->
+ <!--end switcher-->
     <!-- Bootstrap JS -->
     <script src="{{ asset('assets/js/bootstrap.bundle.min.js') }}"></script>
     <!--plugins-->
@@ -161,7 +161,6 @@
     <!--app JS-->
     <script src="{{ asset('assets/js/app.js') }}"></script>
     <script>
-
 $.ajaxSetup({
     headers: {
         'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
@@ -172,26 +171,8 @@ $.ajaxSetup({
             let pere_id = $("input[name=pere_id]")[0].value
             let count = $("input").length;
             for (let index = 2; index <= count; index++) {
-                index-=1;
-                if ($("input")[index].name === 'adresse') {
-                    let adresse = $("input")[index].value;
-                    let info = $("input")[index+=1].value;
-                    if ($("input")[index+=1].checked)
-                        var ship = 'ship';
-                    else
-                        var ship = 'dont ship';
-                    $.ajax({
-                    url: "updatePere",
-                    type:"POST",
-                    data:{
-                        pere_id:pere_id,
-                        adresse:adresse,
-                        info:info,
-                        ship:ship
-                    }});
-                    break;
-                }
-                index+=1;
+                index-=1 ;
+               index+=1;
                 let sexe = $("input")[index].value;
                 let color = $("input")[index+=1].value;
                 let list_id = $("input")[index+=1].value;

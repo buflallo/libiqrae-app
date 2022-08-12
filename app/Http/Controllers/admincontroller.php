@@ -147,14 +147,11 @@ class admincontroller extends Controller
 
         if ($image = $request->file('logo_img')) {
 
-                $destinationPath = '/assets/images/ecole/';
+                $destinationPath = public_path() . '/assets/images/ecole/';
     
                 $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
-    
                 $image->move($destinationPath, $profileImage);
-    
                 $input['logo_img'] = "$profileImage";
-
         }
 
     
@@ -184,8 +181,8 @@ class admincontroller extends Controller
         $commandes = DB::table('commandes')
         ->join('peres','peres.id','=','commandes.pere_id')
         ->join('listes','listes.id','=','commandes.liste_id')
-        ->select('peres.id as pere_id','peres.nom as nom','peres.tel as tel','commandes.status','commandes.created_at','peres.adresse as address','peres.info as rem')->groupBy('peres.id','peres.nom','peres.tel','commandes.status','commandes.created_at','peres.adresse','peres.info')
-        ->get();
+        ->select('peres.id as pere_id','peres.nom as nom','peres.tel as tel','commandes.status','commandes.created_at','peres.adresse as address','peres.info as rem')->groupBy('peres.id','peres.nom','peres.tel','commandes.status','commandes.created_at','peres.adresse','peres.info')->get();
+	$commandes = $commandes->unique('pere_id');
         return view('AdminViews.Commandes')->with('commandes',$commandes);
 
     }
@@ -232,8 +229,10 @@ class admincontroller extends Controller
     public function updatePere(Request $request)
     {
         $pere = Pere::find($request->pere_id);
-        $pere->adresse = $request->adresse;
-        $pere->info = $request->info;
+        if($request->adresse)
+		$pere->adresse = $request->adresse;
+        if($request->info)
+		$pere->info = $request->info;
         $pere->livraison = $request->ship;
         $pere->save();
     }
@@ -242,9 +241,12 @@ class admincontroller extends Controller
         $fils = new Fils;
         $fils->pere_id = $request->pere_id;
         $fils->list_id = $request->list_id;
-        $fils->genre = $request->sexe;
-        $fils->couleur_pref = $request->color;
-        $fils->info = $request->rem;
+        if ($request->sexe)
+		$fils->genre = $request->sexe;
+        if($request->color)
+		$fils->couleur_pref = $request->color;
+        if($request->rem)
+		$fils->info = $request->rem;
         $fils->save();
         $commandes = DB::table('commandes')
         ->join('peres','peres.id','=','commandes.pere_id')
@@ -256,9 +258,6 @@ class admincontroller extends Controller
 
     public function printcommande($id)
     {
-        
-
-
     $images = DB::table('fils')
     ->where('fils.pere_id',$id)
     ->join('peres','peres.id','=','fils.pere_id')
